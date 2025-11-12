@@ -26,7 +26,8 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "start-server-and-test": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,7 +39,8 @@
     "e2e:open": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{js,jsx}' --max-warnings=0",
-    "lint:fix": "eslint 'src/**/*.{js,jsx}' --fix"
+    "lint:fix": "eslint 'src/**/*.{js,jsx}' --fix",
+    "ci:e2e": "start-server-and-test start http://localhost:3000 e2e"
   },
   "browserslist": {
     "production": [
