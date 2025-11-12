@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import { postedAt } from '../utils/helpers';
 import {
   asyncUpVoteComment,
@@ -16,7 +17,9 @@ const CommentItem = ({ comment, threadId }) => {
 
   const handleUpVote = () => {
     if (!user) {
-      alert('Silakan login terlebih dahulu');
+      // alert('Silakan login terlebih dahulu');
+      // replace using react-toastify
+      toast('Silakan login terlebih dahulu', { type: 'warning' });
       return;
     }
 
@@ -26,7 +29,9 @@ const CommentItem = ({ comment, threadId }) => {
 
   const handleDownVote = () => {
     if (!user) {
-      alert('Silakan login terlebih dahulu');
+      // alert('Silakan login terlebih dahulu');
+      // replace using react-toastify
+      toast('Silakan login terlebih dahulu', { type: 'warning' });
       return;
     }
 

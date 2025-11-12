@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 import { asyncGetProfile } from './states/auth/authSlice';
 import { getAccessToken } from './utils/api';
 import Navigation from './components/Navigation';
@@ -30,6 +31,7 @@ const App = () => {
   return (
     <div className="app">
       <Navigation />
+      <ToastContainer />
       <main className="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />

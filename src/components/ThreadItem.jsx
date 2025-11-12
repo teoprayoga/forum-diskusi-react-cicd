@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import { postedAt } from '../utils/helpers';
 import {
   asyncUpVoteThread,
@@ -19,7 +20,9 @@ const ThreadItem = ({ thread }) => {
   const handleUpVote = (e) => {
     e.preventDefault();
     if (!user) {
-      alert('Silakan login terlebih dahulu');
+      // alert('Silakan login terlebih dahulu');
+      // replace using react-toastify
+      toast('Silakan login terlebih dahulu', { type: 'warning' });
       return;
     }
 
@@ -35,7 +38,9 @@ const ThreadItem = ({ thread }) => {
   const handleDownVote = (e) => {
     e.preventDefault();
     if (!user) {
-      alert('Silakan login terlebih dahulu');
+      // alert('Silakan login terlebih dahulu');
+      // replace using react-toastify
+      toast('Silakan login terlebih dahulu', { type: 'warning' });
       return;
     }
 

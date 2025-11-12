@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import {
   asyncGetThreadDetail,
   asyncCreateComment,
@@ -35,13 +36,17 @@ const ThreadDetailPage = () => {
     e.preventDefault();
 
     if (!user) {
-      alert('Silakan login terlebih dahulu');
+      // alert('Silakan login terlebih dahulu');
+      // replace using toastify
+      toast('Silakan login terlebih dahulu', { type: 'warning' });
       navigate('/login');
       return;
     }
 
     if (!comment.trim()) {
-      alert('Komentar tidak boleh kosong');
+      // alert('Komentar tidak boleh kosong');
+      // replace using toastify
+      toast('Komentar tidak boleh kosong', { type: 'warning' });
       return;
     }
 
@@ -54,7 +59,8 @@ const ThreadDetailPage = () => {
 
   const handleUpVote = () => {
     if (!user) {
-      alert('Silakan login terlebih dahulu');
+      // alert('Silakan login terlebih dahulu');
+      toast('Silakan login terlebih dahulu', { type: 'warning' });
       navigate('/login');
       return;
     }
@@ -70,7 +76,8 @@ const ThreadDetailPage = () => {
 
   const handleDownVote = () => {
     if (!user) {
-      alert('Silakan login terlebih dahulu');
+      // alert('Silakan login terlebih dahulu');
+      toast('Silakan login terlebih dahulu', { type: 'warning' });
       navigate('/login');
       return;
     }
