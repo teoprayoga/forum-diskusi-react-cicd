@@ -282,3 +282,5 @@ MIT License
 - [Dicoding](https://www.dicoding.com/) untuk API
 - [React](https://reactjs.org/) untuk library
 - [Redux Toolkit](https://redux-toolkit.js.org/) untuk state management
+
+# Test CI
