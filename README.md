@@ -2,6 +2,14 @@
 
 Aplikasi Forum Diskusi yang dibangun dengan React dan Redux, menggunakan Dicoding Forum API.
 
+## 🌐 Deployment URLs
+
+### Production
+**URL:** https://forum-diskusi-react-cicd.vercel.app/
+
+### GitHub Repository
+**URL:** https://github.com/teoprayoga/forum-diskusi-react-cicd.git
+
 ## 📋 Fitur
 
 ### Kriteria Utama
@@ -282,7 +290,3 @@ MIT License
 - [Dicoding](https://www.dicoding.com/) untuk API
 - [React](https://reactjs.org/) untuk library
 - [Redux Toolkit](https://redux-toolkit.js.org/) untuk state management
-
-# Test CI
-
-# Test CI

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import { asyncRegisterUser } from '../states/auth/authSlice';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -31,7 +32,9 @@ const RegisterPage = () => {
     );
 
     if (result.payload?.success) {
-      alert('Registrasi berhasil! Silakan login.');
+      // alert('Registrasi berhasil! Silakan login.');
+      // replace using react-toastify
+      toast('Registrasi berhasil! Silakan login.', { type: 'success' });
       navigate('/login');
     }
   };

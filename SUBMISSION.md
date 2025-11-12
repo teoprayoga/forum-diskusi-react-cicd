@@ -32,7 +32,7 @@
 - ✅ `screenshot/2_ci_check_pass.png` - CI check pass
 - ✅ `screenshot/3_branch_protection.png` - Branch protection
 
-**Vercel URL:** [ADD YOUR VERCEL URL HERE]
+**Vercel URL:** https://forum-diskusi-react-cicd.vercel.app/
 
 **Total:** 6/6 ✅
 
@@ -206,10 +206,10 @@ npm run build
 ## 🌐 Deployment URLs
 
 ### Production
-**URL:** [ADD YOUR VERCEL PRODUCTION URL]
+**URL:** https://forum-diskusi-react-cicd.vercel.app/
 
 ### GitHub Repository
-**URL:** [ADD YOUR GITHUB REPO URL]
+**URL:** https://github.com/teoprayoga/forum-diskusi-react-cicd.git
 
 ## ✅ Final Verification
 

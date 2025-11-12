@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import { asyncCreateThread } from '../states/threads/threadsSlice';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -23,14 +24,18 @@ const NewThreadPage = () => {
     e.preventDefault();
 
     if (!title.trim() || !body.trim()) {
-      alert('Judul dan isi thread harus diisi');
+      // alert('Judul dan isi thread harus diisi');
+      // replace using react-toastify
+      toast('Judul dan isi thread harus diisi', { type: 'warning' });
       return;
     }
 
     const result = await dispatch(asyncCreateThread({ title, body, category }));
 
     if (result.payload?.thread) {
-      alert('Thread berhasil dibuat!');
+      // alert('Thread berhasil dibuat!');
+      // replace using react-toastify
+      toast('Thread berhasil dibuat!', { type: 'success' });
       navigate('/');
     }
   };

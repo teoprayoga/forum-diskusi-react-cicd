@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import DOMPurify from 'dompurify';
 import { postedAt } from '../utils/helpers';
 import {
   asyncUpVoteComment,
@@ -16,7 +18,9 @@ const CommentItem = ({ comment, threadId }) => {
 
   const handleUpVote = () => {
     if (!user) {
-      alert('Silakan login terlebih dahulu');
+      // alert('Silakan login terlebih dahulu');
+      // replace using react-toastify
+      toast('Silakan login terlebih dahulu', { type: 'warning' });
       return;
     }
 
@@ -26,7 +30,9 @@ const CommentItem = ({ comment, threadId }) => {
 
   const handleDownVote = () => {
     if (!user) {
-      alert('Silakan login terlebih dahulu');
+      // alert('Silakan login terlebih dahulu');
+      // replace using react-toastify
+      toast('Silakan login terlebih dahulu', { type: 'warning' });
       return;
     }
 
@@ -46,7 +52,7 @@ const CommentItem = ({ comment, threadId }) => {
 
       <div
         className="comment-content"
-        dangerouslySetInnerHTML={{ __html: comment.content }}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(comment.content) }}
       />
 
       <div className="comment-votes">
