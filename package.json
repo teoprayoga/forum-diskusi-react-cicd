@@ -34,7 +34,8 @@
     "e2e:open": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx}",
-    "lint:fix": "eslint src/**/*.{js,jsx} --fix"
+    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
+    "vercel-build": "CI=false react-scripts build"
   },
   "browserslist": {
     "production": [
