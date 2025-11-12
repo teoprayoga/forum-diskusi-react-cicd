@@ -51,7 +51,10 @@ const ThreadItem = ({ thread }) => {
   return (
     <Link to={`/threads/${thread.id}`} className="thread-item">
       <div className="thread-header">
-        <div className="thread-category">#{thread.category}</div>
+        <div className="thread-category">
+          #
+          {thread.category}
+        </div>
         <div className="thread-owner">
           <img src={thread.owner.avatar} alt={thread.owner.name} className="avatar-small" />
           <span>{thread.owner.name}</span>
@@ -71,18 +74,25 @@ const ThreadItem = ({ thread }) => {
             onClick={handleUpVote}
             className={`vote-button ${isUpVoted ? 'active-up' : ''}`}
           >
-            👍 {thread.upVotesBy.length}
+            👍
+            {' '}
+            {thread.upVotesBy.length}
           </button>
           <button
             type="button"
             onClick={handleDownVote}
             className={`vote-button ${isDownVoted ? 'active-down' : ''}`}
           >
-            👎 {thread.downVotesBy.length}
+            👎
+            {' '}
+            {thread.downVotesBy.length}
           </button>
         </div>
         <div className="thread-meta">
-          <span>💬 {thread.totalComments}</span>
+          <span>
+            💬
+            {thread.totalComments}
+          </span>
           <span>{postedAt(thread.createdAt)}</span>
         </div>
       </div>

@@ -91,7 +91,10 @@ const ThreadDetailPage = () => {
   return (
     <div className="thread-detail-page">
       <div className="thread-detail-container">
-        <div className="thread-category-tag">#{thread.category}</div>
+        <div className="thread-category-tag">
+          #
+          {thread.category}
+        </div>
 
         <h1 className="thread-detail-title">{thread.title}</h1>
 
@@ -114,20 +117,28 @@ const ThreadDetailPage = () => {
             onClick={handleUpVote}
             className={`vote-button ${isUpVoted ? 'active-up' : ''}`}
           >
-            👍 {thread.upVotesBy.length}
+            👍
+            {' '}
+            {thread.upVotesBy.length}
           </button>
           <button
             type="button"
             onClick={handleDownVote}
             className={`vote-button ${isDownVoted ? 'active-down' : ''}`}
           >
-            👎 {thread.downVotesBy.length}
+            👎
+            {' '}
+            {thread.downVotesBy.length}
           </button>
         </div>
       </div>
 
       <div className="comments-section">
-        <h2>Komentar ({thread.comments.length})</h2>
+        <h2>
+          Komentar (
+          {thread.comments.length}
+          )
+        </h2>
 
         {user && (
           <form onSubmit={handleCommentSubmit} className="comment-form">
