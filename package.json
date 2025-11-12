@@ -20,6 +20,7 @@
     "cypress": "^13.6.1",
     "eslint": "^8.54.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.33.2",
@@ -28,14 +29,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "vercel-build": "CI=false react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
     "test:watch": "react-scripts test",
     "e2e": "cypress run",
     "e2e:open": "cypress open",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.{js,jsx}",
-    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
-    "vercel-build": "CI=false react-scripts build"
+    "lint": "eslint 'src/**/*.{js,jsx}' --max-warnings=0",
+    "lint:fix": "eslint 'src/**/*.{js,jsx}' --fix"
   },
   "browserslist": {
     "production": [
