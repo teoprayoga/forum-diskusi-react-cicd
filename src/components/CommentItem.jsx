@@ -55,14 +55,18 @@ const CommentItem = ({ comment, threadId }) => {
           onClick={handleUpVote}
           className={`vote-button ${isUpVoted ? 'active-up' : ''}`}
         >
-          👍 {comment.upVotesBy.length}
+          👍
+          {' '}
+          {comment.upVotesBy.length}
         </button>
         <button
           type="button"
           onClick={handleDownVote}
           className={`vote-button ${isDownVoted ? 'active-down' : ''}`}
         >
-          👎 {comment.downVotesBy.length}
+          👎
+          {' '}
+          {comment.downVotesBy.length}
         </button>
       </div>
     </div>

@@ -14,7 +14,8 @@ const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }) => (
         onClick={() => onSelectCategory(category)}
         className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
       >
-        #{category}
+        #
+        {category}
       </button>
     ))}
   </div>
