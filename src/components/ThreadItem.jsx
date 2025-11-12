@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import DOMPurify from 'dompurify';
 import { postedAt } from '../utils/helpers';
 import {
   asyncUpVoteThread,
@@ -69,7 +70,7 @@ const ThreadItem = ({ thread }) => {
       <h3 className="thread-title">{thread.title}</h3>
       <div
         className="thread-body"
-        dangerouslySetInnerHTML={{ __html: thread.body.substring(0, 150) }}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(thread.body.substring(0, 150)) }}
       />
 
       <div className="thread-footer">

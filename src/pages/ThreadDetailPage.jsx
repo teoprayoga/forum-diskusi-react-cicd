@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import DOMPurify from 'dompurify';
 import {
   asyncGetThreadDetail,
   asyncCreateComment,
@@ -115,7 +116,7 @@ const ThreadDetailPage = () => {
 
         <div
           className="thread-detail-body"
-          dangerouslySetInnerHTML={{ __html: thread.body }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(thread.body) }}
         />
 
         <div className="thread-detail-votes">
