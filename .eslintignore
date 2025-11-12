@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build
+build/
+dist/
+
+# Testing
+coverage/
+
+# Misc
+*.config.js
+serviceWorker.js
+setupTests.js
+
+# Reports
+*.log
